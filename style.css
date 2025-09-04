@@ -1,0 +1,241 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8f5e9;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.titulo_app{
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.titulo_calculo{
+    font-size: 16pt;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  width: 100%;
+}
+
+.tab {
+  flex: 1;
+  padding: 15px;
+  background-color: #a5d6a7;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+.tab.active {
+  background-color: #388e3c;
+  color: white;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.resultado-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.resultado-verde {
+  background-color: #66bb6a;
+  color: white;
+}
+
+.resultado-vermelha {
+  background-color: #ef5350;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 2px;
+  overflow-x: auto;
+  display: block;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+#salvarBtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Botão limpar tabela */
+.btn-limpar {
+  background-color: #ffcccc;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+footer small {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+footer a img {
+  width: 20px;
+  vertical-align: middle;
+}
+
+/* Estilo resultado dose */
+#resultadoDoseBox {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #66bb6a;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+.resultado-media {
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  display: block;
+  width: 100%;
+}
+
+
+/* Estilo resultados variação */
+.resultado-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultado-individual {
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  flex: 1;
+  min-width: 80px;
+}
+
+.resultado-media {
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  input, select {
+    font-size: 14px;
+  }
+
+  .resultado-individual {
+    font-size: 14px;
+  }
+
+  .resultado-media {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resultado-container {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .resultado-individual {
+    flex: 1 1 45%; /* quebra para duas colunas se apertado */
+    min-width: 100px;
+  }
+
+  .resultado-media {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}

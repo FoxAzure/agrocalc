@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Campo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <p class="titulo_app"> <img src="gallery/cana-de-acucar.png" alt=""> AgroCalc</p>
+    <h1 class="titulo_calculo">Calculo Dose Adubo</h1>
+  <header>
+    <button class="tab active" id="doseTab">Calcular Dose</button>
+    <button class="tab" id="variacaoTab">Calcular Variação</button>
+  </header>
+
+  <div class="container">
+    <!-- Seção Dose -->
+    <div id="doseSection">
+      <img src="gallery/logo.png" class="logo" style="margin-bottom: 40px;" />
+
+      <form id="doseForm">
+        <label>Dose (kg/ha): <input type="number" id="dose" /></label>
+        <label>Espaçamento (m): <input type="number" id="espacamento" /></label>
+        <label>Velocidade (km/h): <input type="number" id="velocidade" /></label>
+      </form>
+
+      <div id="resultadoDoseBox" class="resultado-box">
+        <h4>Resultado:</h4>
+        <div id="resultadoDose"></div>
+      </div>
+    </div>
+
+    <!-- Seção Variação -->
+    <div id="variacaoSection" class="hidden">
+      <form id="variacaoForm">
+        <label>Recomendado: <input type="number" id="recomendado" /></label>
+        <label>Linhas:
+          <select id="linhas">
+            <option value="2">2 Linhas</option>
+            <option value="3">3 Linhas</option>
+          </select>
+        </label>
+
+        <div id="inputs2">
+          <label>Esquerdo: <input type="number" id="esquerdo" /></label>
+          <label>Direito: <input type="number" id="direito" /></label>
+        </div>
+
+        <div id="inputs3" class="hidden">
+          <label>Esquerdo: <input type="number" id="esq3" /></label>
+          <label>Meio: <input type="number" id="meio" /></label>
+          <label>Direito: <input type="number" id="dir3" /></label>
+        </div>
+      </form>
+
+      <div id="variacoes" class="resultado-box">
+        <h4>Variações:</h4>
+        <div id="variacoesTexto" class="resultado-container"></div>
+      </div>
+
+      <button id="salvarBtn">Salvar</button>
+
+      <table id="tabelaResultados">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Esq.</th>
+            <th>Meio</th>
+            <th>Dir.</th>
+            <th>Média</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <small>Desenvolvido por</small>
+    <p>Paulo Roberto</p>
+    <a href="https://www.linkedin.com" target="_blank">
+      <img src="gallery/linkedin.png" alt="LinkedIn" />
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
